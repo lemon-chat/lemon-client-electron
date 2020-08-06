@@ -1,0 +1,26 @@
+{
+  "name": "lemon-client-electron",
+  "version": "1.0.0",
+  "description": "lemon client",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:electron": "set NODE_ENV=development && webpack --config webpack.electron.config.js --mode development && electron ."
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Jun Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "electron": "^9.1.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
