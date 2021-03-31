@@ -1,12 +1,13 @@
-// App.js
-import React from "react"
+// App.tsx
 
+import React from "react";
+import LemonMain from "./views/lemon-main";
 
-// const App: React.FC = () => (<div>Hello, World!</div>)
+import "./App.less";
 
-class App extends React.Component{
+class App extends React.Component {
     render() {
-        return (<div>Hello, World!</div>)
+        return (<LemonMain></LemonMain>)
     }
 }
 

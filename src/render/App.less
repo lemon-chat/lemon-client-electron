@@ -1,0 +1,57 @@
+@import "../../node_modules/antd/dist/antd";
+
+// 禁止文本选择
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+// 允许文本选择
+.text-selectable > div {
+  user-select: text !important;
+  cursor: text !important;
+}
+
+// 禁止按钮描边
+input,
+button,
+textarea,
+:focus {
+  outline: none;
+}
+
+// 禁止图片拖动
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+  cursor: default !important;
+}
+
+// 提示 Toaster
+.gui-toaster {
+  top: 4% !important;
+}
+
+// 隐藏显示组件
+.component-hidden {
+  display: none;
+}
+
+.component-visible {
+  display: block;
+}
+
+// 垂直布局
+div.vertical-aliment-container {
+  display: flex;
+  align-items: center;
+}
