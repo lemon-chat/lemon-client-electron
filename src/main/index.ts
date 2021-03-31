@@ -11,13 +11,13 @@ let mainWindow: electron.BrowserWindow | null
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 900,
-    height: 680,
+    height: 680
   })
-
+  
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "../build/index.html")}`
+      : `file://${path.join(__dirname, "../build/static/index.html")}`
   )
   mainWindow.on("closed", () => (mainWindow = null))
 }
