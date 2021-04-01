@@ -1,5 +1,6 @@
 import electron from "electron"
 const app = electron.app
+const Menu = electron.Menu
 
 const BrowserWindow = electron.BrowserWindow
 
@@ -9,11 +10,31 @@ import isDev from "electron-is-dev"
 let mainWindow: electron.BrowserWindow | null
 
 function createWindow() {
-  mainWindow = new BrowserWindow({
-    width: 900,
-    height: 680
-  })
   
+  mainWindow = new BrowserWindow({
+    width: 830,
+    height: 510,
+    minWidth: 800,
+    minHeight: 500,
+    backgroundColor: "#80FFFFFF",
+    transparent: false,
+    autoHideMenuBar: true
+  })
+
+  // 下面二者选一个，但其中有bug
+  mainWindow.removeMenu()
+  /*
+  mainWindow.setMenu(null)
+  mainWindow.webContents.once('did-finish-load', () => {
+    if (mainWindow != null) {
+      mainWindow.setMenuBarVisibility(false);
+    }
+  })
+  Menu.setApplicationMenu(null)
+  */
+
+  if (!process.env.IS_TEST) mainWindow.webContents.openDevTools()
+
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"

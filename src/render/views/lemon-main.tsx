@@ -3,45 +3,43 @@ import "./lemon-main.less";
 
 import React from "react";
 
-import { Layout, List, Avatar } from 'antd';
+import { Layout, List, Avatar, Input } from 'antd';
 
-import ChatMessage from "../components/chat-message";
+import ChatArea from "../components/chat-area";
+import ChatInput from "../components/chat-input";
 
 const { Header, Footer, Sider, Content } = Layout;
 
-class LemonMain extends React.Component{
-    data = [
-        {
-            title: 'Ant Design Title 1',
-        },
-        {
-            title: 'Ant Design Title 2',
-        },
-        {
-            title: 'Ant Design Title 3',
-        },
-        {
-            title: 'Ant Design Title 4',
-        },
-    ];
+const { TextArea } = Input;
+
+class LemonMain extends React.Component {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            input_height: 120
+        };
+    }
     render() {
         return (
             <Layout style={{ height: "100vh" }}>
-                <Sider>Sider</Sider>
-                <Layout>
-                    <Header>Header</Header>
-                    <Content>
-                        <List
-                            itemLayout="horizontal"
-                            dataSource={this.data}
-                            renderItem={item => (
-                                <List.Item>
-                                    <ChatMessage></ChatMessage>
-                                </List.Item>
-                            )}
-                        />
+                <Sider width="60px" style={{background: "#28292b"}} className="chat-menu">
+                    我是菜单栏
+                </Sider>
+                <Sider width="250px" style={{background: "#e6e5e5"}} className="chat-sider">
+                    我是好友列表
+                </Sider>
+                <Layout className="chat-right-panel">
+                    <Header class="chat-header">
+                        <div className="chat-header-text">
+                            柠檬咕咕幼儿园
+                        </div>
+                    </Header>
+                    <Content class="chat-content-panel" style={{ height: 'calc(100vh - 60px - ' + this.state.input_height + 'px' + ')' }}>
+                        <ChatArea></ChatArea>
                     </Content>
-                    <Footer>Footer</Footer>
+                    <Footer class="chat-input-panel" style={{ height: this.state.input_height + 'px' }}>
+                        <ChatInput />
+                    </Footer>
                 </Layout>
             </Layout>
         )

@@ -10,7 +10,7 @@
     "build:main": "parcel build ./src/main/index.ts -d build/main --public-url /build --target=node6",
     "build:renderer": "parcel build ./static/index.html --out-dir build/static --public-url ./",
     "copy:preload": "mkdir -p ./build/main && cp ./src/main/preload.js ./build/main/preload.js ",
-    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron . \"",
+    "start": "yarn build:main && concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron . \"",
     "electron-build": "electron-builder -wl",
     "build": "yarn clean:build && yarn build:main && yarn build:renderer && yarn electron-build",
     "clean:build": "rimraf ./build/*",
@@ -22,9 +22,11 @@
     "electron-is-dev": "^2.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-split-pane": "^0.1.92",
     "views": "^1.0.2"
   },
   "devDependencies": {
+    "@types/react": "^17.0.3",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
