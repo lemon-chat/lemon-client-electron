@@ -10,10 +10,9 @@ import { EllipsisOutlined } from '@ant-design/icons';
 import ChatArea from "../components/chat-area";
 import ChatInput from "../components/chat-input";
 import ContactList from "../components/contact-list";
+import ChatMenubar from "../components/chat-menubar";
 
 const { Header, Footer, Sider, Content } = Layout;
-
-const { TextArea } = Input;
 
 class LemonMain extends React.Component {
     constructor(props: any) {
@@ -26,7 +25,7 @@ class LemonMain extends React.Component {
         return (
             <Layout style={{ height: "100vh" }}>
                 <Sider width="60px" style={{background: "#28292b"}} className="chat-menu">
-                    我是菜单栏
+                    <ChatMenubar avatar="https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg"></ChatMenubar>
                 </Sider>
                 <Sider width="250px" style={{background: "#e6e5e5"}} className="chat-sider">
                     <ContactList></ContactList>
