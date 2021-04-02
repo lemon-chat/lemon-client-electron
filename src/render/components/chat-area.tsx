@@ -36,6 +36,10 @@ class ChatArea extends React.Component {
             side: 'right'
         },
         {
+            type: 'time',
+            text: '23:10'
+        },
+        {
             type: 'text',
             avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
             text: '来一起写LemonChat吧【',
@@ -46,7 +50,29 @@ class ChatArea extends React.Component {
             avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
             text: '好呀好呀',
             side: 'right'
-        }
+        },
+        {
+            type: 'divider',
+            text: '以下是新消息'
+        },
+        {
+            type: 'text',
+            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
+            text: '做，都可以做',
+            side: 'left'
+        },
+        {
+            type: 'text',
+            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
+            text: '反正你们讨论好协议我再来【x',
+            side: 'left'
+        },
+        {
+            type: 'text',
+            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
+            text: '我觉得还是要正式点，从基础类型的表示开始',
+            side: 'right'
+        },
     ];
     render() {
         return (
