@@ -1,4 +1,6 @@
 
+@import "../styles/main.less";
+
 .lemon-main {
     height: 100%;
     width: 100%;
@@ -22,7 +24,7 @@
 }
 
 .chat-header {
-    background-color: #f5f5f5;
+    background-color: @medium-color;
     border-color: #e8e8e8;
     border-width: 1px;
     border-style: solid;
@@ -39,7 +41,7 @@
 .chat-content-panel {
     position: relative;
     height: calc(100% - 64px);
-    background-color: #f5f5f5;
+    background-color: @medium-color;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -56,4 +58,15 @@
     position: relative;
     min-height: 50px;
     width: 100%;
+}
+
+.chat-header-icon-wrapper {
+    float: right;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.chat-header-icon-wrapper:hover>.chat-inputarea-icon * {
+    color: #6a6a6a;
 }

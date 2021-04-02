@@ -5,8 +5,11 @@ import React from "react";
 
 import { Layout, List, Avatar, Input } from 'antd';
 
+import { EllipsisOutlined } from '@ant-design/icons';
+
 import ChatArea from "../components/chat-area";
 import ChatInput from "../components/chat-input";
+import ContactList from "../components/contact-list";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -26,12 +29,15 @@ class LemonMain extends React.Component {
                     我是菜单栏
                 </Sider>
                 <Sider width="250px" style={{background: "#e6e5e5"}} className="chat-sider">
-                    我是好友列表
+                    <ContactList></ContactList>
                 </Sider>
                 <Layout className="chat-right-panel">
                     <Header class="chat-header">
-                        <div className="chat-header-text">
+                        <div className="chat-header-text special-cursor">
                             柠檬咕咕幼儿园
+                            <span className="chat-header-icon-wrapper">
+                                <EllipsisOutlined className="chat-inputarea-icon" style={{fontSize: '28px'}}/>
+                            </span>
                         </div>
                     </Header>
                     <Content class="chat-content-panel" style={{ height: 'calc(100vh - 60px - ' + this.state.input_height + 'px' + ')' }}>

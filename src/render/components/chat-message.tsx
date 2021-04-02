@@ -1,62 +1,26 @@
 
-
 import React from "react";
 
-import { Avatar } from 'antd';
 
-import "./chat-message.less";
+import ChatMessageText from "./chat-message-text";
 
-interface ChatMessageProps {
-    avatar?: string,
-    text?: string,
-    side?: string
-}
-
-const DefaultChatMessageProps: ChatMessageProps = {
-    avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-    text: '用户',
-    side: 'left'
-}
-
-const ChatMessage: React.Component<ChatMessageProps> = (props: ChatMessageProps) => {
-    if (props.side == 'left') {
-        return (
-            <div className="message-item">
-                <div className="left-message-avatar">
-                    <Avatar src={props.avatar} size={32} shape="square" />
-                </div>
-                <div className="left-message-bubble text-selectable">
-                    <div className="left-tri">
-                        <span></span>
-                    </div>
-                    <div className="left-message-text">
-                        {props.text}
-                    </div>
-                </div>
-            </div>
-        );
-    } else {
-        return (
-            <div className="message-item">
-                <div className="right-message-avatar">
-                    <Avatar src={props.avatar} size={32} shape="square" />
-                </div>
-                <div className="right-message-bubble text-selectable">
-                    <div className="right-tri">
-                        <span></span>
-                    </div>
-                    <div className="right-message-text">
-                        {props.text}
-                    </div>
-                </div>
-            </div>
-        );
+import ChatMessageTime from "./chat-message-time";
+class ChatMessage extends React.Component{
+    render() {
+        if (this.props.type == 'text') {
+            return (
+                <ChatMessageText avatar={this.props.avatar} text={this.props.text} side={this.props.side}></ChatMessageText>
+            )
+        } else if (this.props.type == 'text') {
+            return (
+                <ChatMessageTime text={this.props.text}></ChatMessageTime>
+            )
+        } else {
+            return (
+                <ChatMessageTime text={this.props.text}></ChatMessageTime>
+            )
+        }
     }
 }
-
-
-
-
-ChatMessage.defaultProps = DefaultChatMessageProps;
 
 export default ChatMessage;

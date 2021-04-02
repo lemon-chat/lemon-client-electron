@@ -1,7 +1,14 @@
+@import "../styles/main.less";
+
 .chat-inputarea {
     height: 100%;
-    background: #f5f5f5;
+    background: @medium-color;
     border-top: 1px solid #e8e8e8;
+
+    &:focus-within {
+        height: 100%;
+        background: @medium-color-focus;
+    }
 }
 
 .chat-inputarea-tools {
@@ -23,11 +30,6 @@
     color: #6a6a6a;
 }
 
-.chat-inputarea:focus-within {
-    height: 100%;
-    background: #ffffff;
-}
-
 .chat-inputarea-sendbutton {
     position: relative;
     margin: 5px 5px 5px 5px;
@@ -39,23 +41,26 @@
     width: 100%;
 }
 
-/* width */
-.chat-inputarea-textarea::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-.chat-inputarea-textarea::-webkit-scrollbar-track {
-    background: #ffffff00;
-}
+.chat-inputarea-textarea {
+    /* width */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
 
-/* Handle */
-.chat-inputarea-textarea::-webkit-scrollbar-thumb {
-    background: #0000;
-    border-radius: 5px;
-}
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #ffffff00;
+    }
 
-/* Handle on hover */
-.chat-inputarea-textarea::-webkit-scrollbar-thumb:hover {
-    background: #d5d5d5;
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #0000;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #d5d5d5;
+    }
 }
