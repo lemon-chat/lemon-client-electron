@@ -4,7 +4,6 @@ import "./lemon-main.less";
 import React from "react";
 
 import { Layout, List, Avatar, Input } from 'antd';
-import { BrowserRouter, Route } from 'react-router-dom';
 
 import ChatMenubar from "../components/chat-menubar";
 import LemonChat from "./lemon-chat";
@@ -16,8 +15,10 @@ class LemonMain extends React.Component {
     constructor(props: any) {
         super(props);
         this.state = {
-            input_height: 120
+            input_height: 120,
+            view: "login"
         };
+        this.toMain = this.toMain.bind(this);
     }
     render() {
         return (
@@ -25,13 +26,24 @@ class LemonMain extends React.Component {
                 <Sider width="60px" style={{background: "#28292b"}} className="chat-menu">
                     <ChatMenubar avatar="https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg"></ChatMenubar>
                 </Sider>
-                <BrowserRouter>
-                    <Route path="/" component={LemonLogin}/>
-                    <Route path="/main" component={LemonChat}/>
-                    <Route path="/login" component={LemonLogin}/>
-                </BrowserRouter>
+                { this.changeView() }
             </Layout>
         )
+    }
+
+    changeView() {
+        if (this.state.view == 'login') {
+            return ( <LemonLogin onLoginSuccess={this.toMain}/> )
+        } else {
+            return ( <LemonChat input_height={this.state.input_height}/> )
+        }
+    }
+
+    toMain() {
+        this.setState({
+            input_height: this.state.input_height,
+            view: 'main'
+        });
     }
 }
 

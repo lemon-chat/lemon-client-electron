@@ -7,7 +7,16 @@ import { Row, Col } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined, CloudServerOutlined } from '@ant-design/icons';
 
-class LemonLogin extends React.Component {
+interface LemonLoginProps {
+    onLoginSuccess: () => void;
+}
+
+class LemonLogin extends React.Component<LemonLoginProps> {
+    constructor(props: LemonLoginProps) {
+        super(props);
+        console.log(this.props);
+        this.onLogin = this.onLogin.bind(this);
+    }
     render() {
         return (
             <div style={{height: "100%", width: "100%"}}>
@@ -47,7 +56,7 @@ class LemonLogin extends React.Component {
         )
     }
     onLogin() {
-        
+        this.props.onLoginSuccess();
     }
 
     onRegister() {
