@@ -19,8 +19,8 @@ class ChatArea extends React.Component {
         },
         {
             type: 'text',
-            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-            text: '你好，我也是夏幻',
+            avatar: 'https://i.loli.net/2021/04/02/U19eNu5hFkB63Y7.jpg',
+            text: '你好，我是斯基',
             side: 'right'
         },
         {
@@ -31,7 +31,7 @@ class ChatArea extends React.Component {
         },
         {
             type: 'text',
-            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
+            avatar: 'https://i.loli.net/2021/04/02/U19eNu5hFkB63Y7.jpg',
             text: '是啊真巧啊',
             side: 'right'
         },
@@ -47,8 +47,8 @@ class ChatArea extends React.Component {
         },
         {
             type: 'text',
-            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-            text: '好呀好呀',
+            avatar: 'https://i.loli.net/2021/04/02/U19eNu5hFkB63Y7.jpg',
+            text: '???那是什么',
             side: 'right'
         },
         {
@@ -58,21 +58,15 @@ class ChatArea extends React.Component {
         {
             type: 'text',
             avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-            text: '做，都可以做',
+            text: '就是一个聊天软件',
             side: 'left'
         },
         {
             type: 'text',
-            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-            text: '反正你们讨论好协议我再来【x',
+            avatar: 'https://i.loli.net/2021/04/02/U19eNu5hFkB63Y7.jpg',
+            text: '告辞',
             side: 'left'
-        },
-        {
-            type: 'text',
-            avatar: 'https://i.loli.net/2021/04/01/S5MYlL2bQjc1Zha.jpg',
-            text: '我觉得还是要正式点，从基础类型的表示开始',
-            side: 'right'
-        },
+        }
     ];
     render() {
         return (

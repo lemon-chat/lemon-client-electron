@@ -22,49 +22,7 @@ class ContactList extends React.Component {
             name: '寻常冷却咖啡馆',
             message: '愤怒的泡面：有的',
             time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
-        {
-            avatar: 'https://i.loli.net/2020/02/19/s2GmUF7SwqzC9ER.png',
-            name: '寻常冷却咖啡馆',
-            message: '愤怒的泡面：有的',
-            time: '11:14'
-        },
+        }
     ];
     render() {
         return (
